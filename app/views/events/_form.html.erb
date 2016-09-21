@@ -1,4 +1,10 @@
 <%= form_for @event do |form| %>
+  <% if @event.errors.any? %>
+    <% @event.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
+  <% end %>
+
   <%= form.label :message %>
   <%= form.text_field :message %>
   <%= submit_tag "Save" %>
