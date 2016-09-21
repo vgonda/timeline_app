@@ -3,6 +3,7 @@
 <% @events.each do |event| %>
   <p>
     <strong><%= event.message %></strong>
+    <%= event.relevence %>
     <%= event.created_at %>
     <%= link_to "Show", event_path(event) %>
     <%= link_to "Edit", edit_event_path(event) %>

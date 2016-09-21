@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921213828) do
+ActiveRecord::Schema.define(version: 20160921232507) do
 
   create_table "events", force: :cascade do |t|
     t.text     "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "relevence",  default: 0
   end
 
 end
