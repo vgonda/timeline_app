@@ -3,5 +3,6 @@
   <p>
     <strong><%= event.message %></strong>
     <%= event.created_at %>
+    <%= link_to "Show", event_path(event) %>
   </p>
 <% end %>
