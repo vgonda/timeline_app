@@ -1,4 +1,6 @@
 <h1><%= @event.message %></h1>
 <h6>Relevence: <%= @event.relevence %></h6>
 <h6>Created at <%= @event.created_at %></h6>
+<%= link_to "Increment relevence", add_relevence_event_path(@event) %>
+<%= link_to "Decrement relevence", sub_relevence_event_path(@event) %>
 <%= link_to "Delete", event_path(@event), method: :delete %>

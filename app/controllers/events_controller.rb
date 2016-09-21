@@ -38,6 +38,20 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
+  def add_relevence
+    @event = Event.find(params[:id])
+    @event.relevence += 1
+    @event.save
+    redirect_to event_path(@event)
+  end
+
+  def sub_relevence
+    @event = Event.find(params[:id])
+    @event.relevence -= 1
+    @event.save
+    redirect_to event_path(@event)
+  end
+
   private
 
   def event_params
